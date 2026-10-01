@@ -1,16 +1,29 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Knowledge Base",
+  "name": "detaso Knowledge Base",
   "colors": {
     "primary": "#497C97",
     "light": "#8FB8CE",
     "dark": "#3A6379"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/favicon.svg",
+    "dark": "/images/favicon.svg"
+  },
   "navigation": {
-    "pages": [
-      "index"
+    "tabs": [
+      {
+        "tab": "Platform",
+        "pages": [
+          "index"
+        ]
+      }
     ]
+  },
+  "logo": {
+    "light": "/images/alpha_logo.png",
+    "dark": "/images/alpha_logo.png",
+    "href": "https://detaso.com/"
   }
 }
