@@ -8,8 +8,8 @@
     "dark": "#3A6379"
   },
   "favicon": {
-    "light": "/images/favicon.svg",
-    "dark": "/images/favicon.svg"
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
   },
   "navigation": {
     "tabs": [
@@ -22,8 +22,8 @@
     ]
   },
   "logo": {
-    "light": "/images/alpha_logo.png",
-    "dark": "/images/alpha_logo.png",
+    "light": "/logo/alpha_logo.png",
+    "dark": "/logo/alpha_logo.png",
     "href": "https://detaso.com/"
   }
 }
