@@ -1,0 +1,118 @@
+---
+title: "Set Up Single Sign-On (SSO) for Your Knowledge Base"
+sidebarTitle: "SSO"
+description: "Enable SAML 2.0 or OIDC single sign-on so your team can authenticate with your existing identity provider like Okta, Azure AD, or Google Workspace."
+---
+
+Single Sign-On (SSO) lets your team log in to your knowledge base using the same identity provider (IdP) they use for the rest of your company's tools. Instead of managing a separate password, users authenticate through Okta, Azure AD, Google Workspace, or any compatible provider — giving you centralized access control, consistent security policies, and a smoother login experience. SSO also supports just-in-time provisioning and role mapping so you can manage knowledge base access directly from your IdP.
+
+<Note>
+  SSO is available on the **Enterprise plan** only. If you are on a lower-tier plan, visit your billing settings to upgrade before configuring SSO.
+</Note>
+
+---
+
+## Supported Providers
+
+You can connect any **SAML 2.0** or **OIDC**-compatible identity provider. The following providers are commonly used and have been tested:
+
+<CardGroup cols={3}>
+  <Card title="Okta" icon="lock">
+    Supported via SAML 2.0 and OIDC. Use the SAML app integration in the Okta admin console.
+  </Card>
+  <Card title="Azure Active Directory" icon="microsoft">
+    Supported via SAML 2.0 and OIDC. Configure through the Azure Enterprise Applications section.
+  </Card>
+  <Card title="Google Workspace" icon="google">
+    Supported via SAML 2.0 and OIDC. Set up a custom SAML app in the Google Admin console.
+  </Card>
+  <Card title="OneLogin" icon="key">
+    Supported via SAML 2.0. Use the custom connector in the OneLogin admin panel.
+  </Card>
+  <Card title="Other Providers" icon="puzzle-piece">
+    Any provider that supports SAML 2.0 or OIDC is compatible. Use the generic setup flow and provide your IdP metadata manually.
+  </Card>
+</CardGroup>
+
+---
+
+## Enabling SSO
+
+<Steps>
+  <Step title="Go to Settings > Security > Single Sign-On">
+    In your workspace, navigate to **Settings > Security > Single Sign-On**. If SSO has never been configured, you will see an empty state with a **Configure SSO** button.
+  </Step>
+  <Step title="Click Configure SSO">
+    Click **Configure SSO** to open the SSO setup wizard.
+  </Step>
+  <Step title="Choose your protocol">
+    Select either **SAML 2.0** or **OIDC** depending on what your identity provider supports. If your provider supports both, SAML 2.0 is generally recommended for enterprise setups due to broader compatibility.
+  </Step>
+  <Step title="Configure your identity provider">
+    Copy the following values from the setup wizard and enter them in your identity provider's application configuration:
+
+    | Field | Description |
+    |---|---|
+    | **SP Entity ID** | Uniquely identifies your knowledge base to the IdP |
+    | **ACS URL** (SAML) | The endpoint that receives and processes SAML assertions |
+    | **Redirect URI** (OIDC) | The callback URL for OIDC authorization responses |
+
+    Refer to your IdP's documentation for where to enter these values. For SAML, you will also need to set the **NameID format** to `Email Address`.
+  </Step>
+  <Step title="Paste your IdP metadata">
+    Return to the SSO setup wizard and provide your identity provider's metadata. You can do this in one of two ways:
+
+    - **Metadata URL** — Paste the URL to your IdP's metadata XML endpoint. The platform fetches and refreshes this automatically.
+    - **Metadata XML** — Paste the raw XML from your IdP if a URL is not available.
+
+    For OIDC, enter your **Issuer URL**, **Client ID**, and **Client Secret** instead.
+  </Step>
+  <Step title="Test the connection">
+    Click **Test SSO** to open a test login flow in a new browser tab. Sign in with your IdP credentials. If the test succeeds, a confirmation message appears and you are redirected back to the setup wizard.
+
+    Do not proceed to the next step until the test passes successfully. If the test fails, double-check that your SP Entity ID, ACS URL, and metadata values are entered correctly in your IdP.
+  </Step>
+  <Step title="Enable SSO">
+    Click **Enable SSO** to activate single sign-on for your workspace. At this point, users can log in using either SSO or their existing password.
+
+    Optionally, toggle **Enforce SSO** to require all users to authenticate via SSO only. When enforcement is active, password-based login is disabled for all members.
+
+    <Warning>
+      Before enforcing SSO, make sure at least one Admin account has an emergency recovery method configured. If your identity provider becomes unavailable and SSO enforcement is active, you may lose access to your workspace. Contact support to set up an emergency bypass before enabling enforcement.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## Just-in-Time Provisioning
+
+Just-in-Time (JIT) provisioning automatically creates a workspace account for any user who authenticates via SSO for the first time, without requiring a prior invitation. New users provisioned this way are assigned the **Viewer** role by default.
+
+JIT provisioning is enabled automatically when SSO is active. You can change provisioned users' roles manually from **Settings > Team** after they log in, or use role mapping (see below) to assign roles based on IdP group membership.
+
+---
+
+## Role Mapping
+
+Role mapping lets you assign knowledge base roles automatically based on group membership in your identity provider, so you do not need to manage roles manually for each user.
+
+Configure role mapping under **Settings > Security > Single Sign-On > Role Mapping** by defining attribute-based rules:
+
+| IdP Group / Attribute Value | Knowledge Base Role |
+|---|---|
+| `kb-admins` | Admin |
+| `kb-editors` | Editor |
+| `kb-viewers` (or any other group) | Viewer |
+
+The exact attribute name depends on your IdP configuration. For SAML, role information is typically passed as a custom attribute in the assertion (for example, `role` or `groups`). For OIDC, it is typically included as a claim in the ID token.
+
+<Note>
+  If a user belongs to multiple mapped groups, the highest-privilege role takes precedence. For example, a user in both `kb-editors` and `kb-viewers` is assigned the **Editor** role.
+</Note>
+
+---
+
+## Disabling SSO
+
+To disable SSO, navigate to **Settings > Security > Single Sign-On** and click **Disable SSO**. All users can immediately log in with their email address and password again. SSO configuration is saved so you can re-enable it later without re-entering your IdP metadata.

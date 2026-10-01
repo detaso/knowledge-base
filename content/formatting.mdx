@@ -1,0 +1,145 @@
+---
+title: "Formatting Guide for Knowledge Base Articles"
+sidebarTitle: "Formatting"
+description: "Use headings, lists, callouts, code blocks, tables, and other formatting elements to make your articles clear and easy to scan."
+---
+
+Good formatting transforms a wall of text into a document readers can navigate confidently. The knowledge base editor gives you a full suite of formatting tools — from inline text styles and headings to rich callout boxes, syntax-highlighted code blocks, and responsive tables — all designed to make your content clear, consistent, and easy to scan at a glance.
+
+## Text Formatting
+
+Apply inline styles using the floating toolbar that appears when you select text, or use keyboard shortcuts for speed.
+
+| Style | Toolbar | Keyboard shortcut |
+|---|---|---|
+| **Bold** | **B** | Cmd/Ctrl+B |
+| *Italic* | *I* | Cmd/Ctrl+I |
+| <u>Underline</u> | <u>U</u> | Cmd/Ctrl+U |
+| ~~Strikethrough~~ | ~~S~~ | — |
+| `Inline code` | `<>` | Cmd/Ctrl+E |
+| Hyperlink | 🔗 | Cmd/Ctrl+K |
+
+When inserting a hyperlink, paste the destination URL and optionally set the link to open in a new tab. To link to another article in your knowledge base, start typing the article title in the URL field — the editor will suggest matching articles automatically.
+
+## Headings
+
+Your article title is automatically set as the H1 — you don't need to add one manually inside the body. Use H2 and H3 to build a clear, nested structure within the article.
+
+<CardGroup cols={2}>
+  <Card title="H2 — Major Sections" icon="heading">
+    Use H2 for top-level sections of the article. Each H2 appears as an entry in the table of contents, helping readers jump directly to the part they need.
+  </Card>
+  <Card title="H3 — Subsections" icon="list-tree">
+    Use H3 for subsections within an H2 block. H3s are indented under their parent H2 in the table of contents.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Stick to H2 headings for major sections so they appear in the article's auto-generated table of contents in the reader view. H3s and below are not surfaced in the top-level outline, so reserve them for fine-grained sub-topics within a section.
+</Tip>
+
+Avoid skipping heading levels (for example, jumping from H2 directly to a bold paragraph as a pseudo-heading). Consistent hierarchy makes articles accessible to screen readers and easier to navigate for all users.
+
+## Lists
+
+Choose the list type that best matches your content's structure.
+
+<Tabs>
+  <Tab title="Bullet Lists">
+    Use bullet lists for unordered items where sequence doesn't matter — feature lists, requirements, options. Start a bullet list by clicking the list icon in the toolbar or typing `- ` at the beginning of a line.
+
+    ```
+    - First item
+    - Second item
+      - Nested item (indent with Tab)
+    - Third item
+    ```
+  </Tab>
+  <Tab title="Numbered Lists">
+    Use numbered lists for sequential steps, ranked items, or any content where order is meaningful. Start a numbered list by typing `1. ` at the beginning of a line.
+
+    ```
+    1. First step
+    2. Second step
+       1. Nested sub-step
+    3. Third step
+    ```
+  </Tab>
+  <Tab title="Task Lists">
+    Use task (checklist) lists for actionable items readers can track. Insert a task list with the `/checklist` slash command.
+
+    ```
+    - [ ] Incomplete task
+    - [x] Completed task
+    ```
+
+    Readers viewing the published article can check items off interactively — their state is saved per-user, not globally.
+  </Tab>
+</Tabs>
+
+To create a nested list, place the cursor at the start of the item you want to indent and press **Tab**. Press **Shift+Tab** to outdent.
+
+## Callouts
+
+Callouts draw attention to important information without interrupting the flow of the article body. Insert any callout type using the `/callout` slash command or from the toolbar's **Insert** menu.
+
+<CardGroup cols={2}>
+  <Card title="Info" icon="circle-info">
+    Use **Info** callouts for supplementary context, background information, or clarifications that are helpful but not critical to completing the task at hand.
+  </Card>
+  <Card title="Tip" icon="lightbulb">
+    Use **Tip** callouts for best practices, shortcuts, or recommendations that improve the reader's experience beyond the minimum steps.
+  </Card>
+  <Card title="Warning" icon="triangle-exclamation">
+    Use **Warning** callouts to flag actions that could cause data loss, security issues, or hard-to-reverse consequences. Reserve warnings for genuinely risky situations.
+  </Card>
+  <Card title="Note" icon="note-sticky">
+    Use **Note** callouts for important clarifications or exceptions to the general guidance in the article — things readers must keep in mind but that don't rise to the level of a warning.
+  </Card>
+</CardGroup>
+
+## Code Blocks
+
+<Tabs>
+  <Tab title="Inline Code">
+    Use inline code for short references to commands, file names, environment variables, or UI text that must be typed exactly. Wrap text in backticks or use the **Cmd/Ctrl+E** shortcut.
+
+    Example: Run `npm install` to install dependencies.
+  </Tab>
+  <Tab title="Code Blocks">
+    Use fenced code blocks for multi-line code samples, configuration files, terminal output, and scripts. Insert a code block with the `/code` slash command or triple backticks.
+
+    After inserting the block, select a **language** from the dropdown in the block's top-right corner to enable syntax highlighting. Supported languages include JavaScript, TypeScript, Python, Go, Ruby, Bash, JSON, YAML, SQL, and more.
+
+    ````markdown
+    ```javascript
+    const greet = (name) => {
+      return `Hello, ${name}!`;
+    };
+    ```
+    ````
+
+    Always specify the language — unlabeled code blocks render without syntax highlighting, making them harder to read.
+  </Tab>
+</Tabs>
+
+## Tables
+
+Tables work best for comparing options, listing parameters, or presenting structured reference data. Insert a table using the `/table` slash command.
+
+Once the table is inserted:
+
+- **Add a column**: Click the **+** icon at the right edge of any column header.
+- **Add a row**: Click the **+** icon at the bottom of any row.
+- **Delete a row or column**: Right-click a cell to open the context menu, then choose **Delete Row** or **Delete Column**.
+- **Toggle a header row**: Use the table toolbar to mark the first row as a header, which applies distinct styling and aids accessibility.
+
+<Note>
+  Keep tables narrower than the readable content width where possible. Very wide tables scroll horizontally on mobile devices, which can hurt the reading experience for customers on phones or tablets.
+</Note>
+
+## Dividers and Spacing
+
+Insert a horizontal rule to visually separate major sections that don't warrant their own heading. Use the `/divider` slash command or type `---` on a blank line and press Enter.
+
+For vertical spacing between blocks, press **Enter** once to create a standard paragraph break. Avoid adding multiple blank lines to force extra space — the editor's built-in spacing between block elements is consistent and optimized for readability across devices and themes.

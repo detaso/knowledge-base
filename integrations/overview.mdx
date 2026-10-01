@@ -1,0 +1,55 @@
+---
+title: "Integrate Your Knowledge Base with Third-Party Tools"
+sidebarTitle: "Integrations"
+description: "Connect your knowledge base to Slack, support tools, analytics platforms, and other services to streamline how your team creates and uses documentation."
+---
+
+Integrations let you connect your knowledge base to the tools your team already uses every day. Whether you want to push article notifications into Slack, automate workflows with Zapier, or build custom experiences on top of the API, you can extend your knowledge base without leaving your existing stack.
+
+<CardGroup cols={2}>
+  <Card title="Slack" icon="slack" href="/integrations/slack">
+    Get article notifications in Slack channels
+  </Card>
+  <Card title="API Access" icon="code" href="/integrations/api-access">
+    Access articles programmatically via REST API
+  </Card>
+  <Card title="Zapier" icon="bolt">
+    Automate workflows with 5,000+ apps via Zapier
+  </Card>
+  <Card title="Webhooks" icon="webhook">
+    Receive real-time events when articles are published or updated
+  </Card>
+</CardGroup>
+
+## Webhooks
+
+Webhooks let you receive real-time HTTP POST notifications whenever something changes in your knowledge base. To set one up, go to **Settings > Integrations > Webhooks** and enter the URL of the endpoint you want to receive events. Your server must respond with a `2xx` status code within 10 seconds to acknowledge receipt.
+
+The following events are currently supported:
+
+- `article.published` — fired when an article is first published
+- `article.updated` — fired when a published article is edited and saved
+- `article.deleted` — fired when an article is permanently deleted
+- `category.created` — fired when a new category is created
+
+Each webhook delivery includes a JSON payload with the event name, a UTC timestamp, and a `data` object describing the affected resource. Here is a sample payload for an `article.published` event:
+
+```json
+{
+  "event": "article.published",
+  "timestamp": "2024-03-15T10:30:00Z",
+  "data": {
+    "id": "art_abc123",
+    "title": "Getting Started Guide",
+    "url": "https://help.yourcompany.com/articles/getting-started",
+    "category": "onboarding",
+    "author": "jane@yourcompany.com"
+  }
+}
+```
+
+You can use webhook payloads to trigger cache invalidations, sync content to external systems, notify stakeholders, or build custom automations without polling the API.
+
+<Note>
+  Zapier and webhook integrations are available on the **Pro plan and above**. Upgrade your workspace in **Settings > Billing** to unlock these features.
+</Note>

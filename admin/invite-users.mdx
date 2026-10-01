@@ -1,0 +1,94 @@
+---
+title: "Invite and Manage Team Members in Your Workspace"
+sidebarTitle: "Invite Users"
+description: "Add team members to your knowledge base workspace, assign them roles, manage pending invitations, and remove users when needed."
+---
+
+Adding your team to the workspace lets you collaborate on articles, delegate publishing responsibilities, and control who can see private content. Each person you invite is assigned a role that determines what they can do — from reading articles to managing workspace settings. You can invite individuals one at a time or upload a CSV to add many users at once.
+
+<Tip>
+  Consider assigning new contributors the **Viewer** role initially. This gives them time to read through existing articles and get a feel for your team's style and structure before they start creating or editing content. You can upgrade their role to Editor at any time.
+</Tip>
+
+---
+
+## Inviting a Team Member
+
+<Steps>
+  <Step title="Go to Settings > Team">
+    Navigate to **Settings > Team** in your workspace. You'll see a list of current members and any pending invitations.
+  </Step>
+  <Step title="Click Invite Member">
+    Click the **Invite Member** button in the upper right of the Team page.
+  </Step>
+  <Step title="Enter the email address">
+    Type the email address of the person you want to invite. The email address must be unique — you cannot send a second invitation to an address that already has a pending invite or an active account in this workspace.
+  </Step>
+  <Step title="Select a role">
+    Choose one of the three available roles for this member:
+
+    - **Admin** — Full access to all workspace features, including billing and settings
+    - **Editor** — Can create, edit, and publish articles and manage categories
+    - **Viewer** — Read-only access to workspace content
+
+    For a full breakdown of what each role can do, see [Roles and Permissions](/admin/roles).
+  </Step>
+  <Step title="Click Send Invite">
+    Click **Send Invite**. The invitee receives an email with a link to accept the invitation and create or log in to their account. The invitation link is valid for **7 days**.
+  </Step>
+</Steps>
+
+---
+
+## Pending Invitations
+
+Invited users who have not yet accepted their invitation appear in the **Pending Invitations** section on the Team page. From there you can:
+
+- **Resend** the invitation email if the original expired or was missed — click the menu next to the pending invite and select **Resend Invite**
+- **Revoke** an invitation before it is accepted — click the menu and select **Revoke Invite**; the invitation link is immediately invalidated
+
+Once a user accepts their invitation and logs in for the first time, they move from the Pending list to the Active Members list.
+
+---
+
+## Changing a User's Role
+
+You can update any member's role at any time without removing and re-inviting them.
+
+Click the **role badge** (for example, "Editor") displayed next to a member's name in the Team list. A dropdown appears showing all available roles. Select the new role — the change takes effect immediately. The user does not need to log out and back in.
+
+Only **Admins** can change roles. For more detail on role permissions, see [Roles and Permissions](/admin/roles).
+
+---
+
+## Removing a User
+
+To remove a team member from your workspace:
+
+1. Go to **Settings > Team**.
+2. Click the **⋯ menu** next to the user's name.
+3. Select **Remove from Workspace**.
+4. Confirm the action in the dialog that appears.
+
+The user immediately loses access to your workspace and cannot log in. Any articles they authored remain in the workspace and retain their name in the author field. If you need to reassign authorship, you can edit those articles individually.
+
+<Note>
+  Removing a user does not delete their account — they retain access to any other workspaces they belong to. Only their membership in your workspace is revoked.
+</Note>
+
+---
+
+## Bulk Invites
+
+<Note>
+  Bulk invites are available on **Pro and Enterprise plans** only.
+</Note>
+
+To invite multiple users at once, upload a CSV file from the Team page:
+
+1. Go to **Settings > Team** and click **Bulk Invite**.
+2. Download the CSV template to see the required format.
+3. Fill in one row per person with their **email address** and **role** (`admin`, `editor`, or `viewer`).
+4. Upload the completed CSV and click **Send Invites**.
+
+Each address in the file receives an individual invitation email. Rows with invalid email addresses or duplicate entries are flagged in the upload summary so you can correct them before re-submitting. Billing seat limits apply — the upload will warn you if the number of new Editors or Admins exceeds your plan's seat allowance.

@@ -1,0 +1,114 @@
+---
+title: "Customize Your Knowledge Base Branding and Appearance"
+sidebarTitle: "Branding"
+description: "Add your logo, choose brand colors, customize the header and footer, and match your knowledge base to your product's visual identity."
+---
+
+Your knowledge base is often the first place customers turn when they need help, which makes branding an important part of the experience. Every visual element — from your logo and color palette to your footer links — can be tailored to match your product's identity, so visitors feel confident they're in the right place. You can manage all of these options under **Settings > Branding**.
+
+<Tip>
+  Use your primary brand color as the **Primary Color** setting for the most cohesive look. This color appears on links, active navigation states, and call-to-action buttons throughout the knowledge base, tying every interaction back to your visual identity.
+</Tip>
+
+<Note>
+  All branding changes take effect immediately for all visitors as soon as you save them — there is no separate publish step.
+</Note>
+
+---
+
+## Logo and Favicon
+
+**Logo**
+
+Upload your logo to display it in the knowledge base header. Supported formats are **PNG** and **SVG**, with a maximum file size of **2 MB**. SVG is recommended when possible because it scales cleanly at any resolution. Your logo links to the root of your knowledge base by default.
+
+To upload your logo, go to **Settings > Branding > Logo**, click **Upload Logo**, and select your file.
+
+**Favicon**
+
+The favicon appears in browser tabs and bookmark lists. Upload a **PNG** or **ICO** file at either **32×32** or **64×64** pixels. Larger images are automatically downscaled, but starting at the correct dimensions produces the sharpest result.
+
+---
+
+## Colors
+
+Fine-tune the color scheme under **Settings > Branding > Colors**. The live preview panel on the right updates in real time as you adjust each value, so you can see exactly how your choices will look before saving.
+
+<CardGroup cols={3}>
+  <Card title="Primary Color" icon="palette">
+    Used for links, buttons, active navigation states, and interactive elements. This should be your most recognizable brand color.
+  </Card>
+  <Card title="Background Color" icon="square">
+    Sets the main page background. Use a neutral white or light gray for maximum readability; dark backgrounds are supported for dark-mode branding.
+  </Card>
+  <Card title="Text Color" icon="text-size">
+    Controls the default body text color. Ensure sufficient contrast against your chosen background to meet accessibility standards.
+  </Card>
+</CardGroup>
+
+Enter colors as hex values (e.g., `#0F62FE`) or use the color picker. Changes are saved per-field when you click **Save Colors**.
+
+---
+
+## Header and Navigation
+
+Configure your header under **Settings > Branding > Header**.
+
+**Custom Navigation Links**
+
+Add links to your main website, product, pricing page, or any external resource directly in the knowledge base header. Each link has a **Label** and a **URL**. Drag links to reorder them. Navigation links open in the same tab by default; toggle **Open in new tab** for external URLs.
+
+**Header Background Color**
+
+Set a background color for the header bar independently from the main page background. This is useful when your logo looks best on a specific background or when you want a distinct top-of-page visual treatment.
+
+**Search Bar Visibility**
+
+The global search bar is shown in the header by default. Disable it here if you prefer to rely on in-page search or a custom search integration. Note that hiding the header search bar also removes the keyboard shortcut hint from the header; the shortcut itself (`/` or `Cmd+K`) continues to work.
+
+---
+
+## Footer
+
+Customize the footer under **Settings > Branding > Footer**.
+
+**Custom Footer Text**
+
+Add a copyright notice, legal disclaimer, or any short message to the footer. Basic HTML is not supported — use plain text only.
+
+**Social Links**
+
+Add links to your social profiles. Supported platforms display a recognizable icon automatically; any other URL displays as plain text.
+
+**Powered-By Badge**
+
+By default, a small "Powered by [Product]" badge appears in the footer. You can hide this badge on **Pro and Enterprise plans** by toggling **Show powered-by badge** off under Footer settings.
+
+---
+
+## Custom CSS
+
+For advanced visual customizations that go beyond the settings above, you can inject custom CSS under **Settings > Branding > Advanced**.
+
+<Note>
+  Custom CSS injection is available on **Pro and Enterprise plans** only.
+</Note>
+
+Write standard CSS in the editor provided. Your styles are appended after the base stylesheet, so any valid CSS selector will work. Use browser developer tools to inspect element class names before writing your rules.
+
+```css
+/* Example: increase article body font size */
+.article-body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Example: round the search bar corners */
+.search-input {
+  border-radius: 999px;
+}
+```
+
+<Warning>
+  Custom CSS can conflict with platform updates. If a future release changes a class name or DOM structure, your styles may stop applying or produce unexpected layout shifts. Review your custom CSS after major platform updates.
+</Warning>

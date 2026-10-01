@@ -1,20 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Knowledge Base",
+  "projectDescription": "A structured knowledge base for organizing, discovering, and sharing information with your team and customers.",
   "theme": "almond",
-  "name": "Knowledge Base",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Get Started",
-      "href": "/quickstart"
-    }
-  },
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -102,5 +93,29 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Article editor with rich text and markdown formatting",
+    "Hierarchical categories and collections",
+    "Full-text search across all content",
+    "Role-based access control for teams",
+    "Public and private knowledge base modes",
+    "Custom branding and domain support",
+    "Slack and third-party integrations",
+    "Version history and content publishing workflow",
+    "Embeddable knowledge base widget",
+    "SSO and team management"
+  ],
+  "publicApiSurface": [
+    "GET /articles — list articles",
+    "POST /articles — create article",
+    "GET /articles/:id — get article",
+    "PUT /articles/:id — update article",
+    "DELETE /articles/:id — delete article",
+    "GET /categories — list categories",
+    "POST /categories — create category",
+    "GET /search?q= — full-text search",
+    "GET /collections — list collections",
+    "POST /users/invite — invite user"
+  ]
 }

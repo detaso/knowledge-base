@@ -1,0 +1,77 @@
+---
+title: "Access Your Knowledge Base Data via REST API"
+sidebarTitle: "API Access"
+description: "Use the REST API to list, create, update, and delete articles and categories programmatically. Authenticate with an API key from your workspace settings."
+---
+
+The REST API gives you full programmatic access to your knowledge base content. Use it to build custom integrations, sync articles with external systems, automate content publishing pipelines, or pull knowledge base data into your own products. Every operation available in the dashboard — creating articles, managing categories, searching content — is available through the API.
+
+## Authentication
+
+All API requests must include a valid API key. To generate one, go to **Settings > API > Generate API Key** in your dashboard. Copy the key immediately — for security reasons, it is only shown once.
+
+Pass your API key in the `Authorization` header of every request:
+
+```bash
+curl https://api.kb.app/v1/articles \
+  -H "Authorization: Bearer your_api_key_here"
+```
+
+Requests made without a valid API key return a `401 Unauthorized` response.
+
+<Note>
+  API keys inherit the same permissions as the user who created them. For content creation and editing operations, generate your key while logged in as a user with the **Editor** role or above. A Viewer-role API key can only read published, publicly visible content.
+</Note>
+
+## Base URL
+
+All API endpoints are available under the following base URL:
+
+```
+https://api.kb.app/v1
+```
+
+## Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/articles` | List all published articles. Supports query params: `?category=`, `?tag=`, `?page=`, `?limit=` |
+| `GET` | `/articles/:id` | Get a single article by its ID |
+| `POST` | `/articles` | Create a new article |
+| `PUT` | `/articles/:id` | Update an existing article |
+| `DELETE` | `/articles/:id` | Permanently delete an article |
+| `GET` | `/categories` | List all categories |
+| `POST` | `/categories` | Create a new category |
+| `GET` | `/search?q=` | Run a full-text search across all accessible articles |
+
+## Rate Limits
+
+To ensure reliable performance for all users, the API enforces rate limits based on your plan:
+
+| Plan | Requests per hour |
+|------|-------------------|
+| Free | 1,000 |
+| Pro | 10,000 |
+| Enterprise | Unlimited |
+
+If you exceed your rate limit, the API returns a `429 Too Many Requests` response. The response includes a `Retry-After` header indicating how many seconds to wait before retrying.
+
+## Example: Create an Article
+
+The following request creates a new published article and assigns it to an existing category:
+
+```bash
+curl -X POST https://api.kb.app/v1/articles \
+  -H "Authorization: Bearer your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "How to Reset Your Password",
+    "body": "## Steps\n1. Click Forgot Password...",
+    "categoryId": "cat_xyz789",
+    "tags": ["account", "security"],
+    "status": "published",
+    "visibility": "public"
+  }'
+```
+
+A successful request returns a `201 Created` response with the full article object, including the system-assigned `id`, `slug`, and `url` fields you can use in subsequent requests.

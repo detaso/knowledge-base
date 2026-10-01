@@ -1,0 +1,80 @@
+---
+title: "Write and Edit Articles in the Knowledge Base Editor"
+sidebarTitle: "Writing Articles"
+description: "Create and edit articles using the rich-text editor or markdown mode. Learn how to structure content, add media, and collaborate with your team."
+---
+
+The article editor is the core workspace for building your knowledge base. Whether you prefer a visual writing experience or writing in raw markdown, the editor adapts to your workflow — giving you a distraction-free environment with powerful formatting, media, and collaboration tools built in.
+
+## Creating a New Article
+
+<Steps>
+  <Step title="Open the New Article dialog">
+    Click **New Article** in the sidebar or top navigation bar. A blank editor opens immediately.
+  </Step>
+  <Step title="Enter a title">
+    Click the title field at the top of the editor and type your article title. Choose a clear, descriptive title that reflects the article's content — this becomes the H1 heading readers see and the slug used in the URL.
+  </Step>
+  <Step title="Choose a category">
+    Select a category from the **Category** dropdown beneath the title field. Categories determine where the article appears in your knowledge base's navigation. If no suitable category exists, create one from the sidebar before continuing.
+  </Step>
+  <Step title="Write your content">
+    Click into the editor body and start writing. Use the toolbar, slash commands, or markdown shortcuts to format your content as you go.
+  </Step>
+  <Step title="Add tags (optional)">
+    Open the **Tags** panel in the right sidebar and add one or more tags. Tags power cross-referencing across your knowledge base — readers clicking a tag see every article that shares it, making related content discoverable without duplicating it.
+  </Step>
+  <Step title="Save as draft or publish">
+    When you're ready, click **Save Draft** to keep the article private, or click **Publish** to make it visible to your audience. You can change this status at any time from the article settings.
+  </Step>
+</Steps>
+
+## Editor Modes
+
+The editor supports two writing modes. Switch between them using the toggle in the top-right corner of the editor.
+
+<CardGroup cols={2}>
+  <Card title="Rich Text Mode" icon="pen-to-square">
+    A WYSIWYG editor with a floating and fixed toolbar. Bold, italicize, insert links, add images, and apply headings using point-and-click controls. What you see while writing closely mirrors what readers see when the article is published.
+  </Card>
+  <Card title="Markdown Mode" icon="code">
+    Write using standard Markdown syntax. The editor renders a live preview alongside your source. Markdown mode is ideal if you copy content from other tools or prefer keeping your hands on the keyboard. All Markdown output is fully compatible with the rich text renderer.
+  </Card>
+</CardGroup>
+
+<Note>
+  Your mode preference is saved per-article. Switching modes converts your content automatically — no formatting is lost when you toggle between them.
+</Note>
+
+## Slash Commands
+
+Type `/` anywhere in the editor body to open the command palette. Slash commands let you insert content blocks without leaving the keyboard. Commonly used commands include:
+
+| Command | What it inserts |
+|---|---|
+| `/h2`, `/h3` | Section headings |
+| `/bullet`, `/numbered` | Bullet or numbered list |
+| `/code` | Fenced code block with language selection |
+| `/image` | Image upload or embed dialog |
+| `/callout` | Info, Warning, Tip, or Note callout box |
+| `/table` | Blank table with customizable columns |
+| `/divider` | Horizontal rule |
+| `/embed` | URL embed for videos, tweets, and more |
+
+Start typing after the `/` to filter the list — for example, `/cod` narrows the palette to code-related blocks.
+
+## Auto-Save
+
+The editor automatically saves your work every 30 seconds. A **Saved** indicator appears in the top bar whenever a save completes. Each auto-save creates an entry in the article's version history, so you can always recover a previous draft.
+
+To save manually at any time, press **Cmd+S** (macOS) or **Ctrl+S** (Windows/Linux). Manual saves are useful before switching tabs or stepping away from your desk.
+
+<Warning>
+  Auto-save requires an active internet connection. If you lose connectivity, the editor queues changes locally and syncs them as soon as the connection is restored. Watch for the **Unsaved changes** indicator in the top bar.
+</Warning>
+
+<Tip>
+  On long articles, open the **Outline** panel in the right sidebar. It lists every H2 and H3 heading in the article and lets you jump to any section with a single click — no scrolling required.
+</Tip>
+
+For a full reference on text formatting, headings, code blocks, tables, and callouts, see the [Formatting Guide](/content/formatting).
