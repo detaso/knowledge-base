@@ -12,10 +12,5 @@
     "pages": [
       "index"
     ]
-  },
-  "background": {
-    "color": {
-      "dark": "#111928"
-    }
   }
 }
