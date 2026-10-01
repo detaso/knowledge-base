@@ -1,6 +1,4 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project. For Mintlify product knowledge (components, configuration, writing standards), install the Mintlify skill: `npx skills add https://mintlify.com/docs`
 
 # Documentation project instructions
 
@@ -15,7 +13,10 @@
 ## Terminology
 
 {/* Add product-specific terms and preferred usage */}
+
 {/* Example: Use "workspace" not "project", "member" not "user" */}
+
+- The company name is "detaso". Always style it in lowercase, including at the start of a sentence and in titles (never "Detaso" or "DETASO" or "deTASO").
 
 ## Style preferences
 
@@ -30,4 +31,5 @@
 ## Content boundaries
 
 {/* Define what should and shouldn't be documented */}
+
 {/* Example: Don't document internal admin features */}
