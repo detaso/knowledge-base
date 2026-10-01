@@ -23,10 +23,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "getting-started/account-setup",
-              "getting-started/navigation"
+              "introduction"
             ]
           },
           {
