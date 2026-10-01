@@ -8,96 +8,9 @@
     "dark": "#4fa1ab"
   },
   "favicon": "/favicon.svg",
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Get Started",
-      "href": "/quickstart"
-    }
-  },
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Knowledge Base",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "introduction"
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "pages": [
-              "concepts/articles",
-              "concepts/categories",
-              "concepts/search",
-              "concepts/permissions"
-            ]
-          },
-          {
-            "group": "Creating Content",
-            "pages": [
-              "content/writing-articles",
-              "content/formatting",
-              "content/media",
-              "content/publishing"
-            ]
-          },
-          {
-            "group": "Organization",
-            "pages": [
-              "organization/categories-and-tags",
-              "organization/collections",
-              "organization/version-control"
-            ]
-          },
-          {
-            "group": "Sharing & Access",
-            "pages": [
-              "sharing/public-private",
-              "sharing/team-access",
-              "sharing/embed"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Administration",
-        "groups": [
-          {
-            "group": "Settings",
-            "pages": [
-              "admin/workspace-settings",
-              "admin/branding",
-              "admin/custom-domain"
-            ]
-          },
-          {
-            "group": "Users & Teams",
-            "pages": [
-              "admin/invite-users",
-              "admin/roles",
-              "admin/sso"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "integrations/overview",
-              "integrations/slack",
-              "integrations/api-access"
-            ]
-          },
-          {
-            "group": "Help",
-            "pages": [
-              "help/faq",
-              "help/troubleshooting"
-            ]
-          }
-        ]
-      }
+    "pages": [
+      "index"
     ]
   }
 }
