@@ -24,6 +24,18 @@
       {
         "group": "Reporting",
         "pages": []
+      },
+      {
+        "group": "Direct Care",
+        "pages": []
+      },
+      {
+        "group": "Organization",
+        "pages": []
+      },
+      {
+        "group": "Billing",
+        "pages": []
       }
     ]
   },
