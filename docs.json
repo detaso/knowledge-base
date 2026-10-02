@@ -12,12 +12,18 @@
     "dark": "/favicon.svg"
   },
   "navigation": {
-    "tabs": [
+    "pages": [
+      "index",
       {
-        "tab": "Platform",
+        "group": "Scheduling",
         "pages": [
-          "index"
+          "starting-therapist-sessions-from-dashboard",
+          "scheduling-calendar-and-reminder-preferences-guide"
         ]
+      },
+      {
+        "group": "Reporting",
+        "pages": []
       }
     ]
   },
