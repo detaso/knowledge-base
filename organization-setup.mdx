@@ -1,0 +1,149 @@
+---
+title: "Organization Setup"
+---
+
+<iframe src="https://www.loom.com/embed/013bca1652694b7eb1e9a50118ba19b6" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+This article walks you through setting up your organization in detaso Organization Management. It covers payers, your entity, locations, services, and organization-wide settings.
+
+Video length: 18:06
+
+## Log in (0:07)
+
+Your administrator sends you an invitation to detaso. This might be someone in HR or, for the first user at your organization, someone at detaso. If you haven't received your invitation, contact them.
+
+1. Open the invitation and create your account. Your email is your login.
+2. Create a password.
+3. Select **Remember me** if you want to stay signed in.
+
+## The dashboard (0:42)
+
+You land on the dashboard when you open Organization Management. At first it only shows entity information. As you use more of the detaso applications, you'll see dashboards built for different roles, from billing and company owners to therapists.
+
+Dashboards show what's coming due, such as funding, scripts, and diagnoses. You choose when you get these alerts in **Settings** (see "Admin settings" below).
+
+## Add your payers (1:39)
+
+**Payers** is the first item under the dashboard. detaso keeps a global list of payers, and you choose the ones your organization bills.
+
+1. Click **Manage** in the top right.
+2. Check the box next to each payer you currently bill.
+3. Save your selections.
+
+Each payer you add shows its details and, where available, a link to that payer's portal.
+
+**Tip:** If a payer isn't in the list, contact detaso support. Once they add it, it shows up in your list within a few minutes.
+
+Your payer list matters. When you set up a client's funding later, you can only choose from your supported payers.
+
+## Set up your entity (2:41)
+
+An entity is your organization or company. Most organizations, especially outpatient clinics, have one entity and one tax ID. You might need more than one entity if you have multiple tax IDs or want to separate parts of your business. You can also separate things by location instead.
+
+Information you enter on the entity is the default. You can override it at the location level later.
+
+1. Go to **Entities** and click **Add**.
+2. Check your organization name and tax ID. If detaso already set these up for you, they're filled in. You can change them here if needed.
+3. Choose the **Industries** you support, such as therapy.
+4. Enter your **NPI** and **taxonomy**.
+5. Start typing your address and pick it from the suggestions to fill in the rest.
+6. Click **Save**.
+
+**Important:** The entity address is your **Billing address**. This is the address that goes on claims sent from detaso. Client and staff addresses are labeled differently elsewhere in detaso.
+
+## Add entity billing info and payer IDs (4:53)
+
+This step is easy to miss. After you save the entity, open it to see more options.
+
+1. Click the entity in the list.
+2. Review the overview information you entered. You can **Edit** or **Delete** it, depending on your permissions.
+3. Go to **Billing info**.
+4. Add any payer-specific provider IDs that need to go on claims. For example:
+   - Your Medicaid provider number for the services you offer. This also applies to the PASSEs if you've added them.
+   - A secondary Blue Cross ID, which often starts with "E". This applies to Blue Cross and its subsidiaries.
+5. Save each one.
+
+These IDs go on claims for that payer along with the NPI, taxonomy, tax ID, billing address, and name from your entity setup.
+
+You can also override the NPI, taxonomy, or address for a specific payer. For example, you might bill state payers under one address and commercial payers under another.
+
+## Add locations (7:31)
+
+You need at least one location before you can assign one to your entity, staff, or clients.
+
+1. Go to **Locations** and click **Add**.
+2. Enter a location name.
+3. Add contact details: office number, fax number, primary email, and secondary email.
+4. Link the location to your entity.
+5. Set the days and hours of operation. Monday through Friday is selected by default. If you don't choose days or times, detaso uses the defaults shown in gray.
+6. Choose the **Time zone**.
+7. Enter the location's physical address.
+8. Click **Save**.
+
+Repeat these steps for each location.
+
+## Review location billing info and overrides (9:15)
+
+Click a location to see its details, such as hours of operation and contacts.
+
+In **Billing info**, you'll see the services the location is connected to, such as OT, PT, and speech. You'll also see the default billing details it got from the entity.
+
+To change a billing detail for one location or service:
+
+1. Click **Manage**.
+2. Change the address, provider name, or number.
+3. Save.
+
+The status changes from **Default** to **Override**. This means the location no longer uses the entity's value for that field.
+
+## Add services to a location (10:27)
+
+Tell detaso which services each location offers.
+
+1. Open the location and go to **Services**.
+2. Choose a discipline, such as occupational therapy.
+3. Choose the service type, such as **Eval** or **Treatment**.
+4. Enter a start date. You can leave the end date open.
+5. Choose where the service happens: **Home**, **On-site**, or **Telehealth**.
+6. Save. detaso warns you if a required field is missing.
+
+The **Paperwork** setting will be covered in a later training.
+
+Setting up entities and locations correctly is critical for billing. You'll also use locations when you assign staff and clients.
+
+## Organization settings (11:47)
+
+In **Settings**, the organization tab includes:
+
+- Days of operation
+- Time
+- Time zone
+- Name order preference (last name, first name)
+- Your logo
+
+To add your logo, click upload and choose the file from your computer. Your logo will be used on reports and other documents.
+
+## Admin settings (12:10)
+
+The **Admin** tab controls when alerts appear on the dashboard. You can edit any of these defaults.
+
+- **Funding authorization:** Shows 45 days before funding ends.
+- **Eval and treatment scripts:** Shows 60 days before a script ends.
+- **Diagnoses:** Shows when a diagnosis ends within 30 days.
+- **Client default script duration:** The default length of a new treatment or evaluation script. This is 12 by default.
+
+## Direct care settings (12:55)
+
+The **Direct** tab has settings for direct care services: OT, PT, and speech. To change a setting, click **Edit** next to it.
+
+- **Expired evaluation hard stop:** When this is on, therapists can't treat a client after their evaluation ends (usually after one year) until a re-evaluation is done. It's off by default. Turn it on if you want to block treatment until you confirm the client still qualifies.
+- **Target date for objectives:** The default target date for treatment plan objectives is 90 days. Therapists can still change any objective's target date in the treatment plan.
+- **Units per day:** The maximum treatment units a therapist can bill for a service in one day. The default is 4. For example, Arkansas Medicaid now allows 6 units, so change this to 6 if that applies to you.
+- **Expiration notices:** How far ahead therapists see expirations on their own dashboards. The default is 30 days.
+- **Default rendered service approval deadline:** When therapists must finish last week's notes. The default is Monday at 1:00. For example, if you bill on Wednesday morning, you might set it to Tuesday at noon. This deadline helps keep therapists accountable. It doesn't stop you from billing notes that are already signed.
+- **Treatment session limit without authorization:** A payer rule that limits treatment until a prior authorization (PA) is entered. For example, under the Arkansas Medicaid rule, a client with 120 minutes on their script and no PA can only be treated for up to 90 minutes. Once you enter the PA, therapists can treat up to the full script. More rules will be added over time.
+- **Treatment session character requirements:** Treatment notes use the SOAP format (Subjective, Objective, Assessment, Plan). To require a minimum number of characters in each section, click **Edit** and enter a number. Subjective, Assessment, and Plan are each one text field. Objective is based on the objectives the therapist addresses.
+
+## Next steps (17:37)
+
+That finishes Organization Management setup. Messaging, permissions, and paperwork settings are covered in other training videos. If you have questions, contact detaso support.

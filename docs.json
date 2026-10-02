@@ -33,7 +33,9 @@
       },
       {
         "group": "Organization",
-        "pages": []
+        "pages": [
+          "organization-setup"
+        ]
       },
       {
         "group": "Billing",
