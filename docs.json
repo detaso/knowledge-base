@@ -23,7 +23,9 @@
       },
       {
         "group": "Reporting",
-        "pages": []
+        "pages": [
+          "untitled-page"
+        ]
       },
       {
         "group": "Direct Care",
