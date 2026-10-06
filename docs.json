@@ -14,31 +14,9 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Home",
+        "tab": "Help Docs & Videos",
         "pages": [
-          "index"
-        ]
-      },
-      {
-        "tab": "Videos & Tutorials",
-        "pages": [
-          {
-            "group": "Scheduling",
-            "pages": [
-              "starting-therapist-sessions-from-dashboard",
-              "scheduling-calendar-and-reminder-preferences-guide"
-            ]
-          },
-          {
-            "group": "Reporting",
-            "pages": [
-              "untitled-page"
-            ]
-          },
-          {
-            "group": "Direct Care",
-            "pages": []
-          },
+          "index",
           {
             "group": "Organization",
             "pages": [
@@ -48,8 +26,28 @@
           {
             "group": "Billing",
             "pages": []
+          },
+          {
+            "group": "Direct Care",
+            "pages": []
+          },
+          {
+            "group": "Reporting",
+            "pages": [
+              "untitled-page"
+            ]
+          },
+          {
+            "group": "Scheduling",
+            "pages": [
+              "starting-therapist-sessions-from-dashboard",
+              "scheduling-calendar-and-reminder-preferences-guide"
+            ]
           }
         ]
+      },
+      {
+        "tab": "Contact"
       }
     ]
   },
