@@ -47,7 +47,10 @@
         ]
       },
       {
-        "tab": "Contact"
+        "tab": "Contact",
+        "pages": [
+          "contact-us"
+        ]
       }
     ]
   },
